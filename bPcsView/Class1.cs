@@ -95,7 +95,7 @@ namespace bPcsView
             {
                 // Loading中に動きが欲しいので赤色で一文字動かし続ける
                 string s = "Now Loading ... " + bms.BI_BMSFolder + bms.BI_BMSFile;
-                int x = 0, waitnum = 8;
+                int x = 0, waitnum = (int)(8.0 * 8333.0 /  (double)INTERVAL_TIME);
                 if ((nLoadingLetter / waitnum) >= s.Length) nLoadingLetter = 0;
                 DX.DrawString((SIZE_WIDTH - DX.GetDrawStringWidth(s, s.Length)) / 2, 550 + nYSizeOfs, s, DXLIBCOLOR_GREEN);
                 bool b = false;

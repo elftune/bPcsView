@@ -16,9 +16,9 @@ namespace bPcsView
 {
     public partial class Form1 : Form
     {
-        public const string APP_TITLE = "bPcsView ver. 0.2019.03.08.01";
+        public const string APP_TITLE = "bPcsView ver. 0.2019.03.13.01";
         const int SIZE_WIDTH = 1600, SIZE_HEIGHT = 900;
-        const int INTERVAL_TIME = 8333; // 16666 8333
+        const int INTERVAL_TIME = 16666; //8333; // 16666 8333
         bool bOK = false;
         long lNowTime, lNextTime;
         uint DXLIBCOLOR_WHITE = DX.GetColor(255, 255, 255);
@@ -367,7 +367,7 @@ namespace bPcsView
                     }
                     lNextTime += INTERVAL_TIME;
                     lNowTime = DX.GetNowHiPerformanceCount();
-                    if (lNextTime < lNowTime) lNextTime = lNowTime + INTERVAL_TIME;
+//                    if (lNextTime < lNowTime) lNextTime = lNowTime + INTERVAL_TIME;
 
                     FrameCount++;
                     FrameTime = (uint)(DX.GetNowHiPerformanceCount() / 1000);
