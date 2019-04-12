@@ -93,7 +93,7 @@ namespace bPcsView
 
             if (bms.mode == CXBMS.MODE.LOAD_LOADING)
             {
-                // Loading中に動きが欲しいので赤色で一文字動かし続ける
+                // Loading中に動きが欲しいので赤色で一文字動かし続ける(TEST)
                 string s = "Now Loading ... " + bms.BI_BMSFolder + bms.BI_BMSFile;
                 int x = 0, waitnum = (int)(8.0 * 8333.0 /  (double)INTERVAL_TIME);
                 if ((nLoadingLetter / waitnum) >= s.Length) nLoadingLetter = 0;
